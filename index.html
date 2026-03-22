@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ashu CSS - Advanced Playground</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Ashu CSS Advanced Engine</h1>
+    <p>Build your UI block by block. Try dragging <b>Ashu-flex</b> and <b>Ashu-items-center</b> to center the text!</p>
+  </header>
+
+  <div class="playground-container">
+    
+    <div class="class-palette" id="palette">
+      
+      <h3>Layout & Alignment</h3>
+      <div class="category-grid">
+        <div class="draggable-class" draggable="true" data-class="Ashu-d-flex">Ashu-d-flex</div>
+        <div class="draggable-class" draggable="true" data-class="Ashu-flex-col">Ashu-flex-col</div>
+        <div class="draggable-class" draggable="true" data-class="Ashu-items-center">Ashu-items-center</div>
+        <div class="draggable-class" draggable="true" data-class="Ashu-justify-center">Ashu-justify-center</div>
+      </div>
+
+      <h3>Colors</h3>
+      <div class="category-grid">
+        <div class="draggable-class" draggable="true" data-class="Ashu-bg-coral">Ashu-bg-coral</div>
+        <div class="draggable-class" draggable="true" data-class="Ashu-bg-teal">Ashu-bg-teal</div>
+        <div class="draggable-class" draggable="true" data-class="Ashu-bg-slate">Ashu-bg-slate</div>
+        <div class="draggable-class" draggable="true" data-class="Ashu-text-white">Ashu-text-white</div>
+      </div>
+
+      <h3>Effects (New!)</h3>
+      <div class="category-grid">
+        <div class="draggable-class" draggable="true" data-class="Ashu-shadow-sm">Ashu-shadow-sm</div>
+        <div class="draggable-class" draggable="true" data-class="Ashu-shadow-lg">Ashu-shadow-lg</div>
+        <div class="draggable-class" draggable="true" data-class="Ashu-opacity-50">Ashu-opacity-50</div>
+        <div class="draggable-class" draggable="true" data-class="Ashu-opacity-100">Ashu-opacity-100</div>
+      </div>
+      
+      <h3>Spacing & Sizing</h3>
+      <div class="category-grid">
+        <div class="draggable-class" draggable="true" data-class="Ashu-p-20">Ashu-p-20</div>
+        <div class="draggable-class" draggable="true" data-class="Ashu-p-40">Ashu-p-40</div>
+        <div class="draggable-class" draggable="true" data-class="Ashu-w-300">Ashu-w-300</div>
+        <div class="draggable-class" draggable="true" data-class="Ashu-h-300">Ashu-h-300</div>
+      </div>
+
+      <h3>Borders</h3>
+      <div class="category-grid">
+        <div class="draggable-class" draggable="true" data-class="Ashu-rounded-15">Ashu-rounded-15</div>
+        <div class="draggable-class" draggable="true" data-class="Ashu-rounded-100">Ashu-rounded-100</div>
+        <div class="draggable-class" draggable="true" data-class="Ashu-border-4px-solid-black">Ashu-border-4px-solid-black</div>
+        <div class="draggable-class" draggable="true" data-class="Ashu-border-none">Ashu-border-none</div>
+      </div>
+    </div>
+
+    <div class="target-area">
+      <div id="target-box">
+        <div class="target-content">
+          <strong>Style Me!</strong><br>
+          <span id="applied-list" style="font-size: 12px; font-family: monospace; display: block; margin-top: 10px;"></span>
+        </div>
+      </div>
+      <div class="controls">
+        <button id="reset-btn">Reset Box</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="Ashu.css.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

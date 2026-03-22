@@ -1,0 +1,121 @@
+body {
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8fafc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+header {
+  text-align: center;
+  margin-top: 20px;
+  color: #334155;
+}
+
+.playground-container {
+  display: flex;
+  gap: 40px;
+  margin-top: 30px;
+  width: 95%;
+  max-width: 1200px;
+  align-items: flex-start;
+}
+
+/* Left Panel: Draggable Classes (Now a grid for better organization) */
+.class-palette {
+  flex: 1.5;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #475569;
+  border-bottom: 2px solid #f1f5f9;
+  padding-bottom: 5px;
+}
+
+.draggable-class {
+  padding: 8px 10px;
+  background: #f1f5f9;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  cursor: grab;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 13px;
+  font-weight: 600;
+  color: #0f172a;
+  transition: all 0.1s;
+  text-align: center;
+}
+.draggable-class:hover {
+  background: #e2e8f0;
+  border-color: #94a3b8;
+}
+.draggable-class:active {
+  cursor: grabbing;
+  transform: scale(0.95);
+}
+
+/* Right Panel: Target Drop Zone */
+.target-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: sticky;
+  top: 40px;
+}
+
+#target-box {
+  /* Base size and border, but NO hardcoded layout or colors! */
+  width: 250px;
+  min-height: 250px;
+  border: 2px dashed #94a3b8;
+  transition: all 0.3s ease;
+  font-family: sans-serif;
+}
+#target-box.drag-over {
+  background-color: #f1f5f9;
+  border-color: #3b82f6;
+  transform: scale(1.02);
+}
+
+.target-content {
+  padding: 20px;
+  pointer-events: none; /* So the text doesn't block the drop event */
+}
+
+.controls {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+button {
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 14px;
+  transition: 0.2s;
+}
+#reset-btn {
+  background: #ef4444;
+  color: white;
+}
+#reset-btn:hover {
+  background: #dc2626;
+}
