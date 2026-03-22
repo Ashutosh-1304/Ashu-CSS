@@ -1,12 +1,10 @@
-// ==========================================
-// 1. THE ADVANCED Ashu CSS ENGINE
-// ==========================================
+// Ashu CSS 
 class AshuEngine {
   constructor() {
     this.prefix = "Ashu-";
 
     this.rules = {
-      // Layout & Flexbox
+
       d: (el, val) => (el.style.display = val),
       flex: (el, val) => {
         if (val === "row") el.style.flexDirection = "row";
@@ -15,13 +13,13 @@ class AshuEngine {
       items: (el, val) => (el.style.alignItems = val),
       justify: (el, val) => (el.style.justifyContent = val),
 
-      // Spacing & Sizing
+
       p: (el, val) => (el.style.padding = `${val}px`),
       m: (el, val) => (el.style.margin = `${val}px`),
       w: (el, val) => (el.style.width = `${val}px`),
       h: (el, val) => (el.style.height = `${val}px`),
 
-      // Colors (Custom mapped for nicer hex values)
+      
       bg: (el, val) => {
         const colorMap = {
           coral: "#ff7f50",
@@ -35,7 +33,6 @@ class AshuEngine {
         else el.style.color = val;
       },
 
-      // Effects (Shadows & Opacity)
       shadow: (el, val) => {
         if (val === "sm")
           el.style.boxShadow = "0 1px 2px 0 rgba(0, 0, 0, 0.05)";
@@ -47,7 +44,7 @@ class AshuEngine {
       },
       opacity: (el, val) => (el.style.opacity = parseInt(val) / 100),
 
-      // Borders
+      
       border: (el, val) =>
         (el.style.border = val === "none" ? "none" : val.replace(/-/g, " ")),
       rounded: (el, val) =>
@@ -67,7 +64,7 @@ class AshuEngine {
 
     if (this.rules[property]) {
       this.rules[property](el, value);
-      return true; // Return true if successful
+      return true;
     }
     return false;
   }
